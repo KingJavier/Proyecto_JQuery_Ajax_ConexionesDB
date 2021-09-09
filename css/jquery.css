@@ -1,0 +1,45 @@
+/*Configuracion general de las imagenes */
+img{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+/*Ejercicio 1 jQuery*/
+
+#pandora {
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+#horcruxes{
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid white;
+    padding: 30px;
+}
+
+/*Ejercicio 6*/
+.gryffindor{
+    border:2px solid red;
+    background: yellow;
+}
+
+.ravenclaw{
+    border:2px solid blue;
+    background: white;
+}
+
+.hufflepuff{
+    border:2px solid black;
+    background: yellow;
+}
+
+.slytherin{
+    border:2px solid green;
+    background: gray;
+}
+

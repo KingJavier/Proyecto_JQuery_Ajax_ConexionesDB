@@ -1,0 +1,131 @@
+
+/*Diseño CSS Header*/
+header{
+    height: 50%;
+    background: #02070D;
+    text-align: left;
+    font-family: 'Times New Roman';
+}
+
+/*Diseño IMG Header*/
+.imagenSena{
+    width: 10%;
+    height: 10%;
+}
+
+/*Diseño Barra de navegación*/
+nav{
+    background: #091326;
+    font-family:Arial;
+}
+
+/*Diseño Aside*/
+.aside{
+    background-color: #252526;
+}
+
+/*MAsntiene siempre el aside*/
+
+.sidebar {
+    width: 100%;
+    float: left;
+    position: -webkit-sticky;  
+    position: sticky;
+    top: 10%; 
+}  
+
+/*Diseño Main*/
+main{
+    background: #727273;
+}
+
+.asi-sup{
+    border-top: 20px solid #727273;
+    border-bottom:10px solid #727273;
+}
+
+.asi-inf{
+    border-bottom:10px solid #727273;
+}
+
+/*Diseño Footer*/
+footer {
+    background: #02070D;
+    position: absolute;
+    width: 100%;
+}
+
+/*Diseño Img W3C*/
+.imagenW3C{
+    width: 50px;
+    height: 33px;
+}
+
+/*BARRA LATERAL DE REDES SOCIALES*/
+
+.social-bar{
+    position: fixed;
+    right: 0;
+    top: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+.icon{
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all .5s;
+}
+
+.icon-facebook{
+    background: #2e406e;
+    border-radius: 1rem 0 0 0;
+}
+
+.icon-twitter{
+    background: #339dc5;
+}
+
+.icon-youtube{
+    background: #e83028;
+}
+
+.icon-instagram{
+    background: #3f60a5;
+    border-radius: 0 0 0 1rem;
+}
+
+.icon:hover{
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+
+#facebook{
+    width: 30px;
+    height: 30px;
+}
+
+#youtube{
+    width: 30px;
+    height: 30px;
+}
+
+#twitter{
+    width: 30px;
+    height: 30px;
+}
+
+#instagram{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+

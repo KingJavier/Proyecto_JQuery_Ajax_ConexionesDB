@@ -1,0 +1,449 @@
+<!-- jQuery
+ Ficha: 2252471 
+ Aprendiz: Javier Eudoro Rey Castro 
+ Objetivo: Realizar ejercicio con bootstrap,js,jQuery,ajax,conexión a bases de datos, empleando html5
+ Navegador: Chrome, Firefox, Edge, Explorer -->
+
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/jquery.css">
+    <link href="img/homero.png" rel="shortcut icon" />
+
+    <!-- JS -->
+    <script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous">
+    </script>
+
+    <title>jQuery</title>
+
+</head>
+
+<body>
+
+    <!--Barra lateral de redes sociales-->
+    <div class="social-bar">
+        <a href="https://www.facebook.com/" class="icon icon-facebook" target="_blank"><img src="img/facebook.png"
+                id="facebook" title="logo"></a>
+        <a href="https://twitter.com/" class="icon icon-twitter" target="_blank"><img src="img/twitter.png" id="twitter"
+                title="logo"></a>
+        <a href="https://www.youtube.com/" class="icon icon-youtube" target="_blank"><img src="img/youtube.png"
+                id="youtube" title="logo"></a>
+        <a href="https://www.instagram.com/" class="icon icon-instagram" target="_blank"><img src="img/instagram.png"
+                id="instagram" title="logo"></a>
+    </div>
+
+    <div class="container-fluid bg-primary">
+        <div class="row">
+            <!--Header-->
+            <header>
+                <h1 class="text-center text-white">
+                    <img src="img/Sena.png" title="Sena" class="imagenSena">
+                    jQuery - Ficha: 2252471
+                </h1>
+            </header>
+        </div>
+
+        <!--BARRA DE NAVEGACIÓN-->
+        <div class="row">
+            <nav class="navbar navbar-expand- navbar-dark">
+                <div class="container-fluid">
+
+                    <!--Boton que despliega la Barra de navegacion-->
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
+                        aria-label="Navegación de palanca">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!--Nombre de Barra de navegacion-->
+
+                    <a class="navbar-brand" >EJERCICIOS jQuery</a>
+
+                    <!--Sección donde se colapsan los botones del nav-->
+
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <!--Redirige a 1 ejercicio jQuery-->
+                            <a class="btn text-white Sec1" href="#pandora"> Sección 1</a>
+                            <p></p>
+                            <!--Redirige a 2 ejercicio jQuery-->
+                            <a class="btn text-white" href="#horcruxes"> Sección 2</a>
+                            <p></p>
+                            <!--Redirige a 3 ejercicio jQuery-->
+                            <a class="btn text-white" href="#fig1"> Sección 3</a>
+                            <p></p>
+                            <!--Redirige a 4 ejercicio jQuery-->
+                            <a class="btn text-white" href="#fig2"> Sección 4</a>
+                            <p></p>
+                            <!--Redirige a 5 ejercicio jQuery-->
+                            <a class="btn text-white" href="#fig3"> Sección 5</a>
+                            <p></p>
+                            <!--Redirige a 6 ejercicio jQuery-->
+                            <a class="btn text-white" href="#characters1"> Sección 6</a>
+                            <p></p>
+                            <!--Redirige a 7 ejercicio jQuery-->
+                            <a class="btn text-white" href="#fig4"> Sección 7</a>
+                            <p></p>
+                            <!--Redirige a 8 ejercicio jQuery-->
+                            <a class="btn text-white" href="#characters2"> Sección 8</a>
+                            <p></p>
+                            <!--Redirige a 9 ejercicio jQuery-->
+                            <a class="btn text-white" href="#fig2a"> Sección 9</a>
+                            <p></p>
+                            <!--Redirige a 10 ejercicio jQuery-->
+                            <a class="btn text-white" href="#ejercicio10"> Sección 10</a>
+                            <p></p>
+                            <!--Redirige a 11 ejercicio conexion DB-->
+                            <a class="btn text-white" href="#ejercicio11"> Sección 11</a>
+                            <p></p>
+                            <!--Redirige a 12 ejercicio conexion DB-->
+                            <a class="btn text-white" href="#ejercicio12"> Sección 12</a>
+                            <p></p>
+                            <!--Redirige a 13 ejercicio conexion DB-->
+                            <a class="btn text-white" href="#ejercicio13"> Sección 13</a>
+                            <p></p>
+                            <!--Redirige a 14 ejercicio conexion DB-->
+                            <a class="btn text-white" href="#ejercicio14"> Sección 14</a>
+                            <p></p>
+                            <!--Redirige a 15 ejercicio conexion DB-->
+                            <a class="btn text-white" href="#ejercicio15"> Sección 15</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        
+        <div class="row">
+            <!--ASIDE-->
+
+            <!--Barra lateral desplegable con botones que redirigen a respectivos ejercicios-->
+            <aside class="col-md-3 col-sm-12 col-xs-12 aside">
+                <div class="sidebar">
+                    <div class="navbar navbar-expand- navbar-dark container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarColor02">
+                            <div class="navbar-nav me-auto">
+                                <!--Redirige a 1 ejercicio jQuery-->
+                            <a class="btn text-white Sec1" href="#pandora"> Sección 1</a>
+                            <p></p>
+                            <!--Redirige a 2 ejercicio jQuery-->
+                            <a class="btn text-white" href="#horcruxes"> Sección 2</a>
+                            <p></p>
+                            <!--Redirige a 3 ejercicio jQuery-->
+                            <a class="btn text-white" href="#fig1"> Sección 3</a>
+                            <p></p>
+                            <!--Redirige a 4 ejercicio jQuery-->
+                            <a class="btn text-white" href="#fig2"> Sección 4</a>
+                            <p></p>
+                            <!--Redirige a 5 ejercicio jQuery-->
+                            <a class="btn text-white" href="#fig3"> Sección 5</a>
+                            <p></p>
+                            <!--Redirige a 6 ejercicio jQuery-->
+                            <a class="btn text-white" href="#characters1"> Sección 6</a>
+                            <p></p>
+                            <!--Redirige a 7 ejercicio jQuery-->
+                            <a class="btn text-white" href="#fig4"> Sección 7</a>
+                            <p></p>
+                            <!--Redirige a 8 ejercicio jQuery-->
+                            <a class="btn text-white" href="#characters2"> Sección 8</a>
+                            <p></p>
+                            <!--Redirige a 9 ejercicio jQuery-->
+                            <a class="btn text-white" href="#fig2a"> Sección 9</a>
+                            <p></p>
+                            <!--Redirige a 10 ejercicio jQuery-->
+                            <a class="btn text-white" href="#ejercicio10"> Sección 10</a>
+                            <p></p>
+                            <!--Redirige a 11 ejercicio conexion DB-->
+                            <a class="btn text-white" href="#ejercicio11"> Sección 11</a>
+                            <p></p>
+                            <!--Redirige a 12 ejercicio conexion DB-->
+                            <a class="btn text-white" href="#ejercicio12"> Sección 12</a>
+                            <p></p>
+                            <!--Redirige a 13 ejercicio conexion DB-->
+                            <a class="btn text-white" href="#ejercicio13"> Sección 13</a>
+                            <p></p>
+                            <!--Redirige a 14 ejercicio conexion DB-->
+                            <a class="btn text-white" href="#ejercicio14"> Sección 14</a>
+                            <p></p>
+                            <!--Redirige a 15 ejercicio conexion DB-->
+                            <a class="btn text-white" href="#ejercicio15"> Sección 15</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!--MAIN, En este apartado se encuentra los ejercicios con jQuery -->
+            <main class="col-xs-12 col-sm-12 col-md-9 text-center">
+                <!--Primer ejercicio-->
+                <div class="row"> 
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center asi-sup">
+                        <div id="pandora">Esta es la caja de Pandora</div>
+                    </div>
+                    <!--Boton que ejecuta el jQuery donde se despliega un modal donde podemos remplazar el texto-->
+                    <div >
+                        <button type="button" class="btn text-white bg-dark" id="boton1">Ejecutar</button>
+                    </div>
+                </div>
+
+                    <br>
+
+                <!--Segundo ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center asi-inf">
+                        <ol id="horcruxes"><li>Actualmente vacío</li></ol>
+                    </div>
+                    <!--Boton que ejecuta el jquery donde sale un modal que crea una lista de elementos que se remplazan-->
+                    <div >
+                        <button type="button" class="btn text-white bg-dark" id="boton2">Ejecutar</button>
+                    </div>
+                </div>
+
+                    <br>
+
+                <!--Tercer ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <figure id="fig1">
+                            <img id="img1" src="img/harry-potter-1024.jpeg" alt="Harry Potter">
+                            <figcaption id="cap1">Harry Potter interpretado por Daniel Radcliffe</figcaption>
+                        </figure>
+                        <!--Boton que ejecuta el jquery donde se modifican atribitos css a una imagen -->
+                        <div >
+                            <button type="button" class="btn text-white bg-dark" id="boton3">Ejecutar</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <br>
+
+                <!-- Cuarto ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <figure id="fig2">
+                            <img src="img/Hermione.jpg" alt="Hermione Granger">
+                            <figcaption>Hermione Granger interpretada por Emma Watson</figcaption>
+                        </figure>
+                        <!--Boton que ejecuta el jquery donde se cambia una imagen inical -->
+                        <div >
+                            <button type="button" class="btn text-white bg-dark" id="boton4">Ejecutar</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <br>
+
+                <!--Quinto ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <figure id="fig3">
+                            <img src="img/Hermione.jpg" alt="Hermione Granger">
+                            <figcaption>Hermione Granger interpretada por Emma Watson</figcaption>
+                        </figure>
+                        <!--Botones que ejecutan el jquery donde esconde una imagen o la aparece-->
+                        <div >
+                            <button type="button" class="btn text-white bg-dark" id="boton5">Eliminar</button>
+                            <button type="button" class="btn text-white bg-dark" id="boton10">Aparecer</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <br>
+
+                <!--Sexto ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <ol id="characters1">
+                            <li class="gryffindor">Harry</li>
+                            <li class="gryffindor">Ron</li>
+                            <li class="gryffindor">Hermione</li>
+                            <li class="gryffindor">Fred</li>
+                            <li class="gryffindor">George</li>
+                            <li class="ravenclaw">Cho</li>
+                            <li class="hufflepuff">Cedric</li>
+                            <li class="slytherin">Draco</li>
+                            <li class="slytherin">Crabbe</li>
+                            <li class="slytherin">Goyle</li>
+                        </ol>
+                        <!--Boton que ejecuta el jquery donde agrega caracteristicas css y ademas esconde un los elementos de cierto grupo especifico-->
+                        <div >
+                            <button type="button" class="btn text-white bg-dark" id="boton6">Ejecutar</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <br>
+                
+                <!--Septimo ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <figure id="fig4">
+                            <img id="img5" src="img/harry-potter-1024.jpeg" alt="Harry Potter">
+                            <figcaption id="cap5">Harry Potter interpretado por Daniel Radcliffe</figcaption>
+                        </figure>
+                        <!--Boton que ejecuta el jquery donde añade Css a una imagen -->
+                        <div >
+                            <button type="button" class="btn text-white bg-dark" id="boton7">Ejecutar</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <br>
+
+                <!--Octavo ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <ol id="characters2">
+                            <li class="gryffindor">Harry</li>
+                            <li class="gryffindor">Ron</li>
+                            <li class="gryffindor">Hermione</li>
+                            <li class="gryffindor">Fred</li>
+                            <li class="gryffindor">George</li>
+                            <li class="ravenclaw">Cho</li>
+                            <li class="hufflepuff">Cedric</li>
+                            <li class="slytherin">Draco</li>
+                            <li class="slytherin">Crabbe</li>
+                            <li class="slytherin">Goyle</li>
+                        </ol>
+                        <!--Boton que ejecuta el jquery donde Crea una un nuevo campo y define parametros.-->
+                        <div >
+                            <button type="button" class="btn text-white bg-dark" id="boton8">Ejecutar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <!--Noveno ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <figure id="fig2a">
+                            <img src="img/Hermione.jpg" alt="Hermione Granger">
+                            <figcaption>Hermione Granger as played by Emma Watson</figcaption>
+                        </figure>
+                        <!--Boton que ejecuta el jquery donde añade Css a una imagen -->
+                        <div >
+                            <button type="button" class="btn text-white bg-dark" id="boton9">Ejecutar</button>
+                        </div>
+                    </div>
+                </div>
+
+                    <br>
+
+                <!--Decimo ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <h3 id="ejercicio10">Noticias para hoy</h3>  <br>
+                        <!--Boton que ejecuta el jquery donde se usa un metodo Date.toLocaleDateString para dar la fecha-->
+                        <div >
+                            <button type="button" class="btn text-white bg-dark" id="fecha">Ejecutar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                
+                <!--11 ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <h1 id="ejercicio11">Prueba_ajax-json con conexión MySQLi</h1><br>
+                        <!--Boton que redirige a una seccion aparte donde se encuentra el ejercicio-->
+                        <a class="btn text-white bg-dark" href="Taller1-conexión-MySQLi/Prueba_ajax-json.html" >Ejecutar</a>
+                    </div>
+                </div>
+
+                <br>
+
+                <!--12 ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <h1 id="ejercicio12">Prueba_ajax-json con conexión PDO</h1><br>
+                        <!--Boton que redirige a una seccion aparte donde se encuentra el ejercicio-->
+                        <a class="btn text-white bg-dark" href="Taller1-conexión-PDO/Prueba_ajax-json.html" >Ejecutar</a>
+                    </div>
+                </div>
+                
+                <br>
+                
+                <!--13 ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <h1 id="ejercicio13">Prueba_ajax-json con conexión PDO corregido por el Profesor</h1><br>
+                        <!--Boton que redirige a una seccion aparte donde se encuentra el ejercicio-->
+                        <a class="btn text-white bg-dark" href="Taller1-conexión-PDO-corrección/Prueba_ajax-json.html" >Ejecutar</a>
+                    </div>
+                </div>
+
+                <br>
+
+                <!--14 ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <h1 id="ejercicio14">CRUD-Conexión-MySql</h1><br>
+                        <!--Boton que redirige a una seccion aparte donde se encuentra el ejercicio-->
+                        <a class="btn text-white bg-dark" href="CRUD-conexion-MySQLi/index.php" >Ejecutar</a>
+                    </div>
+                </div>
+
+                <br>
+
+                <!--15 ejercicio-->
+                <div class="row">  
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <h1 id="ejercicio15">CRUD-Conexión-PDO</h1><br>
+                        <!--Boton que redirige a una seccion aparte donde se encuentra el ejercicio-->
+                        <a class="btn text-white bg-dark" href="CRUD-conexion-PDO/index.php" >Ejecutar</a>
+                    </div>
+                </div>
+                <br>
+            </main>
+        </div>
+
+        <!--FOOTER-->
+        <div class="row">
+            <footer class="col-md-12 col-sm-12 col-xs-12 text-center">
+                <!--Se definen los derechos de autor y la certificación de la W3C-->
+                <div class="text-white">© 2021 Copyright: Javier Eudoro Rey Castro / Correo: jerey62@misena.edu.co
+                    <img src="img/W3C.png" title="imagen W3C" class="imagenW3C">
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+       -->
+    
+    <!-- JS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/miscript.js"></script>
+
+</body>
+</html>
